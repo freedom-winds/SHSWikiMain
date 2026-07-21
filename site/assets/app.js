@@ -22,12 +22,17 @@
     window.setTimeout(reveal, 6000);
   }
 
-  const faqItems = document.querySelectorAll(".faq-item");
-  faqItems.forEach((item) => {
-    item.addEventListener("toggle", () => {
-      if (!item.open) return;
-      faqItems.forEach((other) => {
-        if (other !== item) other.removeAttribute("open");
+  const faqItems = [...document.querySelectorAll(".faq-item")];
+  document.querySelectorAll(".faq-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const selected = trigger.closest(".faq-item");
+      if (!selected) return;
+
+      const willOpen = !selected.classList.contains("is-open");
+      faqItems.forEach((item) => {
+        const isOpen = item === selected && willOpen;
+        item.classList.toggle("is-open", isOpen);
+        item.querySelector(".faq-trigger")?.setAttribute("aria-expanded", String(isOpen));
       });
     });
   });
