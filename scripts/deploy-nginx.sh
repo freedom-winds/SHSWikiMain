@@ -61,6 +61,11 @@ server {
         return 200 "ok\\n";
     }
 
+    location ~* ^/assets/.*\\.(?:css|js)$ {
+        try_files \$uri =404;
+        add_header Cache-Control "no-cache";
+    }
+
     location /assets/ {
         try_files \$uri =404;
         expires 7d;
