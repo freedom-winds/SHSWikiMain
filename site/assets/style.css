@@ -62,7 +62,15 @@ nav a:hover, nav a:focus-visible { color: var(--red); border-color: var(--red); 
 .future-card { background: #f7f2e8; }
 .quiet-arrow { color: var(--gold); font-size: 24px; }
 .about { padding: 49px 0; border-top: 1px solid var(--line); }
-.about p { margin: 0; color: var(--red); font: 500 clamp(27px, 3vw, 41px)/1.35 var(--display); letter-spacing: 0.04em; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 23px 4px; cursor: pointer; color: var(--red); font: 500 clamp(24px, 2.6vw, 34px)/1.25 var(--display); letter-spacing: 0.04em; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary i { color: var(--gold); font: normal 29px/1 var(--latin); transition: transform 220ms ease; }
+.faq-item[open] summary i { transform: rotate(45deg); }
+.faq-item p { max-width: 850px; margin: 0; padding: 0 4px 25px; color: var(--muted); font: 18px/1.75 var(--display); letter-spacing: 0.045em; }
+.faq-item p a { color: var(--red); border-bottom: 1px solid rgba(125, 17, 23, 0.48); }
+.faq-item p a:hover, .faq-item p a:focus-visible { color: var(--gold); border-color: var(--gold); }
 footer { padding: 24px 0 31px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; letter-spacing: 0.05em; }
 
 @keyframes entry-breathe { 0%, 100% { opacity: 0.58; transform: translateY(2px); } 50% { opacity: 1; transform: translateY(-2px); } }
