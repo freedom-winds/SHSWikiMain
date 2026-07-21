@@ -6,6 +6,7 @@
   --gold: #a98a4e;
   --line: rgba(108, 76, 57, 0.18);
   --display: "STKaiti", "Kaiti SC", KaiTi, "FZKai-Z03", "BiauKai", cursive;
+  --headline: "STXingkai", "FZXingKai-S04S", "DFKai-SB", "STKaiti", "Kaiti SC", KaiTi, cursive;
   --latin: Didot, "Bodoni 72", Baskerville, Georgia, "Times New Roman", serif;
   --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
 }
@@ -37,8 +38,8 @@ nav a:hover, nav a:focus-visible { color: var(--red); border-color: var(--red); 
 .hero { min-height: 565px; position: relative; isolation: isolate; overflow: hidden; }
 .hero-copy { max-width: 940px; position: relative; z-index: 1; padding: clamp(76px, 10vw, 142px) 0 156px; display: flex; flex-direction: column; justify-content: center; }
 .eyebrow, .domain { margin: 0; color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: 0.2em; }
-.hero h1 { margin: 20px 0 0; color: var(--red); font: 500 clamp(50px, 5.2vw, 78px)/1.12 var(--display); letter-spacing: 0.035em; }
-.hero h1 span { color: var(--gold); }
+.hero h1 { margin: 20px 0 0; color: var(--red); font: 600 clamp(50px, 5.2vw, 78px)/1.12 var(--headline); letter-spacing: 0.075em; text-shadow: 0 1px 0 rgba(125, 17, 23, 0.08); }
+.hero h1 span { color: var(--gold); font-size: 1.08em; letter-spacing: 0.045em; }
 .hero-lead { margin: 24px 0 0; color: var(--muted); font: 23px/1.55 var(--display); letter-spacing: 0.09em; }
 .primary-link { width: fit-content; margin-top: 34px; padding: 16px 24px; color: #fffdf8; background: var(--red); border-radius: 5px; font: 19px/1 var(--display); letter-spacing: 0.08em; transition: transform 180ms ease, background 180ms ease; }
 .primary-link:hover, .primary-link:focus-visible { transform: translateY(-2px); background: #9a1d23; }
@@ -67,7 +68,7 @@ nav a:hover, nav a:focus-visible { color: var(--red); border-color: var(--red); 
 .faq-heading { margin: 0; }
 .faq-trigger { width: 100%; display: grid; grid-template-columns: 52px minmax(0, 1fr) 34px; align-items: center; gap: 14px; padding: 21px 2px; border: 0; background: transparent; color: var(--ink); cursor: pointer; text-align: left; }
 .faq-number { color: var(--gold); font: 15px/1 var(--latin); letter-spacing: 0.09em; }
-.faq-question { font: 500 clamp(23px, 2.25vw, 31px)/1.25 var(--display); letter-spacing: 0.04em; }
+.faq-question { font: 500 clamp(20px, 1.7vw, 26px)/1.25 var(--display); letter-spacing: 0.04em; }
 .faq-toggle { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid rgba(169, 138, 78, 0.6); border-radius: 50%; color: var(--gold); font: normal 20px/1 var(--latin); transition: transform 220ms ease, color 180ms ease, border-color 180ms ease, background 180ms ease; }
 .faq-trigger:hover .faq-question, .faq-trigger:focus-visible .faq-question, .faq-item.is-open .faq-question { color: var(--red); }
 .faq-item.is-open .faq-toggle { transform: rotate(45deg); border-color: var(--red); background: var(--red); color: #fffdf8; }
@@ -105,7 +106,7 @@ footer { padding: 24px 0 31px; border-top: 1px solid var(--line); color: var(--m
   .site-card { padding: 25px; }
   .faq-trigger { grid-template-columns: 36px minmax(0, 1fr) 28px; gap: 8px; padding: 18px 0; }
   .faq-number { font-size: 13px; }
-  .faq-question { font-size: 22px; }
+  .faq-question { font-size: 20px; }
   .faq-toggle { width: 24px; height: 24px; font-size: 17px; }
   .faq-answer p { padding: 0 28px 19px 44px; font-size: 16px; }
 }
