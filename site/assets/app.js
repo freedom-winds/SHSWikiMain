@@ -21,5 +21,14 @@
     artwork?.addEventListener("error", reveal, { once: true });
     window.setTimeout(reveal, 6000);
   }
-})();
 
+  const faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach((item) => {
+    item.addEventListener("toggle", () => {
+      if (!item.open) return;
+      faqItems.forEach((other) => {
+        if (other !== item) other.removeAttribute("open");
+      });
+    });
+  });
+})();
